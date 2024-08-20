@@ -1,0 +1,56 @@
+<div class="needs-management">
+    <h3>Suggested Donations</h3>
+  
+    <div class="mt-4">
+      <ul class="list-group">
+        <li *ngFor="let need of needs" class="list-group-item">
+          <h5>{{ need.category }} </h5>
+          <p>{{ need.description }}</p>
+          <p><strong>Quantity:</strong> {{ need.quantity }}</p>
+          <button class="btn btn-sm btn-outline-primary me-2" (click)="selectNeed(need)">Donate</button>
+        </li>
+      </ul>
+    </div>
+
+    <form [formGroup]="needForm" (ngSubmit)="onSubmit()">  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+        <div *ngIf="needForm.get('description')?.invalid && (needForm.get('description')?.dirty || needForm.get('description')?.touched)" class="text-danger">
+          <small *ngIf="needForm.get('description')?.errors?.['required']">Description is required.</small>
+          <small *ngIf="needForm.get('description')?.errors?.['minlength']">Description must be at least 10 characters long.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" formControlName="quantity" min="1">
+        <div *ngIf="needForm.get('quantity')?.invalid && (needForm.get('quantity')?.dirty || needForm.get('quantity')?.touched)" class="text-danger">
+          <small *ngIf="needForm.get('quantity')?.errors?.['required']">Quantity is required.</small>
+          <small *ngIf="needForm.get('quantity')?.errors?.['min']">Quantity must be at least 1.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-select" id="category" formControlName="category">
+          <option value="cloth">Cloth</option>
+          <option value="food">Food</option>
+          <option value="book">Book</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="needForm.invalid">{{ editingNeedId ? 'Update' : 'Add' }} Need</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="resetForm()">Cancel</button>
+    </form>
+  
+    
+  
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    <div class="alert alert-success mt-3" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+  </div>
+  

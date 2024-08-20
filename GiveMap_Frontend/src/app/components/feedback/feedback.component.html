@@ -1,0 +1,12 @@
+<div class="feedback-item mb-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <h5 class="mb-1">{{ feedback.user }}</h5>
+      <small class="text-muted">{{ feedback.createdAt | date }}</small>
+    </div>
+    <div class="mb-2">
+      <span *ngFor="let star of getStarArray(feedback.rating)" class="text-warning">&#9733;</span>
+      <span *ngFor="let star of getStarArray(5 - feedback.rating)" class="text-muted">&#9734;</span>
+    </div>
+    <p class="mb-1">{{ feedback.comment }}</p>
+  </div>
+  

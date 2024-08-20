@@ -1,0 +1,69 @@
+<div class="container">
+  <app-search (resultSelected)="searchResultSelected($event)" ></app-search>
+  <google-map
+    height="500px"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    (mapClick)="addMarker($event)"
+  >
+    <map-marker
+      *ngFor="let marker of markers"
+      [position]="marker.pin!.position!"
+      [title]="marker.pin!.title"
+      [options]="markerOptions"
+      (mapClick)="openInfoWindow(marker)"
+      #markerRef="mapMarker"
+    ></map-marker>
+    <map-marker
+      *ngIf="selectedMarker.pin"
+      [position]="selectedMarker.pin!.position!"
+      [title]="selectedMarker.pin!.title"
+      [options]="markerOptions"
+      (mapClick)="openInfoWindow(selectedMarker)"
+      #markerRef="mapMarker"
+    ></map-marker>
+    <map-info-window>
+    </map-info-window>
+  </google-map>
+
+  <div *ngIf="addMarkerForm" class="mt-4">
+    <h3>Share this location</h3>
+    <form (ngSubmit)="savePin()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="selectedMarker.info.name"
+          name="name"
+          [disabled] = "selectedMarker.pin?.title != null || selectedMarker.pin?.title != undefined"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          [(ngModel)]="selectedMarker.info.description"
+          name="description"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input
+          type="text"
+          class="form-control"
+          id="category"
+          [(ngModel)]="selectedMarker.info.category"
+          name="category"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Save Pin</button>
+    </form>
+  </div>
+</div>

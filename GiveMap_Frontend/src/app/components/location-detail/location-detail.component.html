@@ -1,0 +1,164 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ location.name }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container" *ngIf="location">
+    <h2 class="mb-4">{{ location.name }}</h2>
+  
+    <div class="col">  
+      <div class="col-md-4">
+        <p><strong>Category:</strong> {{ location.category }}</p>
+        <p><strong>Date Added:</strong> {{ location.createdAt | date:'medium' }}</p>
+        <p><strong>Description:</strong> {{ location.description }}</p>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <app-needs-management
+          [locationId]="location.id"
+          (needSelect) = "needSelect($event)"
+        ></app-needs-management>
+      </div>
+  
+      <div class="col-md-6">
+        <app-donation-offering
+          *ngIf="selectedNeed"
+          [selectedNeed]="selectedNeed"
+          [donations]="location.donations"
+        ></app-donation-offering>
+      </div>
+    </div>
+  
+    <!-- <div class="col mt-4">
+      <div class="col-md-8">
+        <h3>Feedback and Ratings</h3>
+        <div class="mb-3">
+          <h4>Average Rating: {{ averageRating | number : "1.1-1" }} / 5</h4>
+          <div>
+            <span
+              *ngFor="let star of getStarArray(averageRating)"
+              class="text-warning"
+              >&#9733;</span
+            >
+            <span
+              *ngFor="let star of getStarArray(5 - averageRating)"
+              class="text-muted"
+              >&#9734;</span
+            >
+          </div>
+        </div>
+        <div *ngFor="let item of feedback">
+          <app-feedback [feedback]="item"></app-feedback>
+        </div>
+        <div *ngIf="feedback.length === 0" class="alert alert-info">
+          No feedback available for this location yet.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>Comments</h3>
+        <ul class="list-group mb-3">
+          <li class="list-group-item" *ngFor="let comment of location.comments">
+            <p>{{ comment.text }}</p>
+            <small class="text-muted"
+              >By {{ comment.user }} on {{ comment.createdAt | date }}</small
+            >
+          </li>
+        </ul>
+        <form [formGroup]="feedbackForm" (ngSubmit)="addFeedback()" class="mb-3">
+          <div class="mb-3">
+            <label for="comment" class="form-label">Add a comment</label>
+            <textarea
+              class="form-control"
+              id="comment"
+              rows="3"
+              formControlName="comment"
+            ></textarea>
+            <div
+              *ngIf="
+                feedbackForm.get('comment')?.invalid &&
+                (feedbackForm.get('comment')?.dirty ||
+                  feedbackForm.get('comment')?.touched)
+              "
+              class="text-danger"
+            >
+              <small *ngIf="feedbackForm.get('comment')?.errors?.['required']"
+                >Comment is required.</small
+              >
+              <small *ngIf="feedbackForm.get('comment')?.errors?.['minlength']"
+                >Comment must be at least 3 characters long.</small
+              >
+            </div>
+          </div>
+          <h3>Ratings</h3>
+          <p>
+            <strong>Average Rating:</strong>
+            {{ location.averageRating | number : "1.1-1" }} / 5
+          </p>
+          <ul class="list-group mb-3">
+            <li class="list-group-item" *ngFor="let rating of location.ratings">
+              <p>Rating: {{ rating.value }} / 5</p>
+              <small class="text-muted"
+                >By {{ rating.user }} on {{ rating.createdAt | date }}</small
+              >
+            </li>
+          </ul>
+          <div class="mb-3">
+            <label for="rating" class="form-label">Add a rating</label>
+            <select class="form-select" id="rating" formControlName="rating">
+              <option value="0" disabled selected>Select rating</option>
+              <option value="1">1 - Poor</option>
+              <option value="2">2 - Fair</option>
+              <option value="3">3 - Good</option>
+              <option value="4">4 - Very Good</option>
+              <option value="5">5 - Excellent</option>
+            </select>
+            <div
+              *ngIf="
+                feedbackForm.get('rating')?.invalid &&
+                (feedbackForm.get('rating')?.dirty ||
+                  feedbackForm.get('rating')?.touched)
+              "
+              class="text-danger"
+            >
+              <small *ngIf="feedbackForm.get('rating')?.errors?.['required']"
+                >Rating is required.</small
+              >
+              <small
+                *ngIf="feedbackForm.get('rating')?.errors?.['min'] || feedbackForm.get('rating')?.errors?.['max']"
+                >Rating must be between 1 and 5.</small
+              >
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="feedbackForm.invalid"
+          >
+            Submit Feedback
+          </button>
+        </form>
+      </div>
+  
+      <div class="col-md-6"></div>
+    </div> -->
+  
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    <div class="alert alert-success mt-3" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+  </div>
+
+  
+  <!-- Add more location details here -->
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+
+

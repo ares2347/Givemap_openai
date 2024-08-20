@@ -1,0 +1,85 @@
+<div class="container mt-4">
+    <h2>Admin Dashboard</h2>
+  
+    <ul class="nav nav-tabs mb-4">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'users'" (click)="switchTab('users')">User Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'locations'" (click)="switchTab('locations')">Location Management</a>
+      </li>
+    </ul>
+  
+    <div *ngIf="activeTab === 'users'">
+      <h3>User Management</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2" (click)="updateUser(user.id, {})">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="activeTab === 'locations'">
+      <h3>Location Management</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Urgency</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of locations">
+            <td>{{ location.id }}</td>
+            <td>{{ location.name }}</td>
+            <td>{{ location.category }}</td>
+            <td>{{ location.urgency }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2" (click)="updateLocation(location.id, {})">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="deleteLocation(location.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="onPageChange(currentPage - 1)">Previous</a>
+        </li>
+        <li class="page-item" *ngFor="let page of [].constructor(Math.ceil(totalItems / itemsPerPage)); let i = index">
+          <a class="page-link" (click)="onPageChange(i + 1)" [class.active]="currentPage === i + 1">{{ i + 1 }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === Math.ceil(totalItems / itemsPerPage)">
+          <a class="page-link" (click)="onPageChange(currentPage + 1)">Next</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

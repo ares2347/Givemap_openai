@@ -1,0 +1,53 @@
+<div class="donation-offering">
+    <h3>Donation Offering</h3>
+    <form [formGroup]="donationForm" (ngSubmit)="onSubmit()"> 
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+        <div *ngIf="donationForm.get('description')?.invalid && (donationForm.get('description')?.dirty || donationForm.get('description')?.touched)" class="text-danger">
+          <small *ngIf="donationForm.get('description')?.errors?.['required']">Description is required.</small>
+          <small *ngIf="donationForm.get('description')?.errors?.['minlength']">Description must be at least 10 characters long.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" formControlName="quantity" min="1">
+        <div *ngIf="donationForm.get('quantity')?.invalid && (donationForm.get('quantity')?.dirty || donationForm.get('quantity')?.touched)" class="text-danger">
+          <small *ngIf="donationForm.get('quantity')?.errors?.['required']">Quantity is required.</small>
+          <small *ngIf="donationForm.get('quantity')?.errors?.['min']">Quantity must be at least 1.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="condition" class="form-label">Condition</label>
+        <select class="form-select" id="condition" formControlName="condition">
+          <option value="new">New</option>
+          <option value="like-new">Like New</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="contactInfo" class="form-label">Contact Email</label>
+        <input type="email" class="form-control" id="contactInfo" formControlName="contactInfo">
+        <div *ngIf="donationForm.get('contactInfo')?.invalid && (donationForm.get('contactInfo')?.dirty || donationForm.get('contactInfo')?.touched)" class="text-danger">
+          <small *ngIf="donationForm.get('contactInfo')?.errors?.['required']">Contact email is required.</small>
+          <small *ngIf="donationForm.get('contactInfo')?.errors?.['email']">Please enter a valid email address.</small>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="donationForm.invalid">{{ editingDonationId ? 'Update' : 'Add' }} Donation Offer</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="resetForm()">Cancel</button>
+    </form>
+  
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    <div class="alert alert-success mt-3" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+  </div>
+  

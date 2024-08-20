@@ -1,0 +1,21 @@
+<form [formGroup]="filterForm" class="mb-3">
+    <div class="row">
+      <div class="col-md-4 mb-2">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-select" id="category" formControlName="category">
+          <option value="">All Categories</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-2">
+        <label for="dateAdded" class="form-label">Date Added</label>
+        <input type="date" class="form-control" id="dateAdded" formControlName="dateAdded">
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <button type="button" class="btn btn-secondary" (click)="resetFilters()">Reset Filters</button>
+      </div>
+    </div>
+  </form>
+  

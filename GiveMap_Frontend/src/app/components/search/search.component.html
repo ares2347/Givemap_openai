@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm" class="d-flex">
+  <input
+    class="form-control me-2"
+    type="search"
+    placeholder="Search locations"
+    aria-label="Search"
+    formControlName="keyword"
+  />
+</form>
+
+<div *ngIf="searchResults.length > 0" class="search-results mt-2">
+  <ul class="list-group">
+    <li *ngFor="let result of searchResults.slice(0, 5)" class="list-group-item" (click)="onResultClick(result)">
+      {{ result.name }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,34 @@
+<div class="donation-tracking">
+    <h2>My Donations</h2>
+  
+    <div *ngIf="donations.length === 0 && !errorMessage" class="alert alert-info">
+      You haven't made any donations yet.
+    </div>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div *ngFor="let donation of donations" class="col">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="card-title">{{ donation.itemName }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Quantity: {{ donation.quantity }}</h6>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ donation.description }}</p>
+            <p><strong>Condition:</strong> {{ donation.condition }}</p>
+            <p><strong>Location:</strong> {{ donation.need.location.name }}</p>
+          </div>
+          <div class="card-footer">
+            <span class="badge" [ngClass]="getStatusClass(donation.status)">
+              {{ donation.status }}
+            </span>
+            <small class="text-muted d-block mt-2">Offered at: {{ donation.createdAt | date:'medium' }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
