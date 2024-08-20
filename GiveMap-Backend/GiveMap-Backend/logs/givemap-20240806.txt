@@ -1,0 +1,1067 @@
+2024-08-06 10:49:53.454 +07:00 [INF] User profile is available. Using 'C:\Users\trant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-06 10:49:53.726 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 10:49:53.726 +07:00 [INF] Hosting environment: Development
+2024-08-06 10:49:53.726 +07:00 [INF] Content root path: D:\Repositories\OpenAI\GiveMap\GiveMap-Backend\GiveMap-Backend
+2024-08-06 10:49:53.755 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger - -
+2024-08-06 10:49:53.825 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/index.html - -
+2024-08-06 10:49:53.829 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger - - - 301 - - 78.1913ms
+2024-08-06 10:49:53.949 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/index.html - - - 200 - text/html;charset=utf-8 124.5981ms
+2024-08-06 10:49:53.979 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/swagger-ui.css - -
+2024-08-06 10:49:53.983 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/swagger-ui-standalone-preset.js - -
+2024-08-06 10:49:53.983 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/swagger-ui-bundle.js - -
+2024-08-06 10:49:53.998 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-06 10:49:53.998 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-06 10:49:54.003 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/swagger-ui.css - - - 200 143943 text/css 23.4884ms
+2024-08-06 10:49:54.003 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-06 10:49:54.012 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 29.1953ms
+2024-08-06 10:49:54.042 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 59.1577ms
+2024-08-06 10:49:54.367 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/v1/swagger.json - -
+2024-08-06 10:49:54.392 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/swagger/favicon-32x32.png - -
+2024-08-06 10:49:54.393 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-06 10:49:54.393 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/favicon-32x32.png - - - 200 628 image/png 0.8554ms
+2024-08-06 10:49:54.502 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.9285ms
+2024-08-06 10:50:41.829 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:50:41.835 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:41.841 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 12.1200ms
+2024-08-06 10:50:41.845 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:50:41.845 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:42.888 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:42'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:50:42.906 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:42'.
+2024-08-06 10:50:42.911 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:50:42.949 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:50:44.097 +07:00 [WRN] The property 'Location.ImageUrls' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2024-08-06 10:50:45.629 +07:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:50:45.780 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:50:45.797 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:50:45.842 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 2888.0677ms
+2024-08-06 10:50:45.843 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:50:45.856 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 4011.1077ms
+2024-08-06 10:50:53.918 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:50:53.920 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:53.921 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 3.0851ms
+2024-08-06 10:50:53.926 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:50:53.926 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:53.931 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:53'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:50:53.932 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:53'.
+2024-08-06 10:50:53.934 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:50:53.935 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:50:53.981 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:50:53.983 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:50:53.984 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:50:53.984 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 49.0199ms
+2024-08-06 10:50:53.984 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:50:53.985 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 59.2717ms
+2024-08-06 10:50:57.207 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/10 - -
+2024-08-06 10:50:57.208 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:57.208 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/10 - - - 204 - - 0.5000ms
+2024-08-06 10:50:57.210 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/10 - -
+2024-08-06 10:50:57.212 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:57.213 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:57'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:50:57.214 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:57'.
+2024-08-06 10:50:57.216 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/10/needs - -
+2024-08-06 10:50:57.216 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:57.216 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/10/needs - - - 204 - - 0.3341ms
+2024-08-06 10:50:57.218 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-06 10:50:57.218 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/10/needs - -
+2024-08-06 10:50:57.219 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:50:57.220 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:57'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:50:57.220 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:50:57'.
+2024-08-06 10:50:57.220 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-06 10:50:57.224 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-06 10:50:57.224 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-06 10:50:57.225 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/10 - - - 401 - - 15.0217ms
+2024-08-06 10:50:57.225 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/10/needs - - - 401 - - 6.9406ms
+2024-08-06 10:51:12.147 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11 - -
+2024-08-06 10:51:12.147 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:12.148 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11 - - - 204 - - 0.6654ms
+2024-08-06 10:51:12.150 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11 - -
+2024-08-06 10:51:12.150 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:12.151 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:51:12'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:51:12.151 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:51:12'.
+2024-08-06 10:51:12.151 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-06 10:51:12.151 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-06 10:51:12.152 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11 - - - 401 - - 1.5727ms
+2024-08-06 10:51:12.155 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:51:12.156 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:12.156 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - - - 204 - - 0.3459ms
+2024-08-06 10:51:12.158 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:51:12.158 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:12.158 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:51:12'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-08-06 10:51:12.159 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01/08/2024 08:49:14', Current time (UTC): '06/08/2024 03:51:12'.
+2024-08-06 10:51:12.159 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-06 10:51:12.159 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-06 10:51:12.159 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11/needs - - - 401 - - 1.3191ms
+2024-08-06 10:51:21.993 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/user/login - -
+2024-08-06 10:51:21.993 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:21.993 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/user/login - - - 204 - - 0.4719ms
+2024-08-06 10:51:21.995 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44384/api/user/login application/json 47
+2024-08-06 10:51:21.996 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:21.996 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.UserController.Login (GiveMap-Backend)'
+2024-08-06 10:51:21.999 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GiveMap_Backend.Controllers.LoginModel) on controller GiveMap_Backend.Controllers.UserController (GiveMap-Backend).
+2024-08-06 10:51:22.263 +07:00 [INF] Executed DbCommand (72ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-08-06 10:51:22.588 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastLoginDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-08-06 10:51:22.601 +07:00 [INF] Updated last login date for user ID: 2
+2024-08-06 10:51:22.601 +07:00 [INF] User authenticated: test@test.com
+2024-08-06 10:51:22.601 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType4`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-06 10:51:22.602 +07:00 [INF] Executed action GiveMap_Backend.Controllers.UserController.Login (GiveMap-Backend) in 603.2344ms
+2024-08-06 10:51:22.603 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.UserController.Login (GiveMap-Backend)'
+2024-08-06 10:51:22.603 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44384/api/user/login application/json 47 - 200 - application/json;+charset=utf-8 607.7601ms
+2024-08-06 10:51:22.620 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:51:22.620 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:22.620 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.4392ms
+2024-08-06 10:51:22.625 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:51:22.626 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:22.637 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:51:22.637 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:22.644 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:51:22.645 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:51:22.645 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:51:22.645 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 8.3446ms
+2024-08-06 10:51:22.645 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:51:22.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 20.7572ms
+2024-08-06 10:51:28.496 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:51:28.496 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:28.496 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.2949ms
+2024-08-06 10:51:28.500 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:51:28.500 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:28.501 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:28.506 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:51:28.506 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:28.506 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.2966ms
+2024-08-06 10:51:28.508 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:51:28.509 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:28.509 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:28.510 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:28.514 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:28.534 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:51:28.545 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:51:28.548 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 33.9164ms
+2024-08-06 10:51:28.548 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:28.548 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 39.6022ms
+2024-08-06 10:51:28.585 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:51:28.595 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:51:28.595 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:51:28.621 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 111.3054ms
+2024-08-06 10:51:28.621 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:28.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 121.6489ms
+2024-08-06 10:51:33.906 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13 - -
+2024-08-06 10:51:33.906 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:33.906 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13 - - - 204 - - 0.4190ms
+2024-08-06 10:51:33.911 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:51:33.911 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:33.911 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - - - 204 - - 0.2826ms
+2024-08-06 10:51:33.921 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:51:33.921 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13 - -
+2024-08-06 10:51:33.922 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:33.922 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:33.922 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:33.922 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:33.922 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:33.922 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:33.929 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:51:33.930 +07:00 [INF] Retrieved details for location ID: 13
+2024-08-06 10:51:33.930 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:51:33.931 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 8.5507ms
+2024-08-06 10:51:33.931 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:33.931 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13 - - - 200 - application/json;+charset=utf-8 9.5381ms
+2024-08-06 10:51:33.933 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:51:33.933 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:51:33.934 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 11.3263ms
+2024-08-06 10:51:33.934 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:33.934 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13/needs - - - 200 - application/json;+charset=utf-8 12.3327ms
+2024-08-06 10:51:39.519 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13 - -
+2024-08-06 10:51:39.519 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:39.519 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13 - - - 204 - - 0.3228ms
+2024-08-06 10:51:39.522 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13 - -
+2024-08-06 10:51:39.522 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:39.522 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:39.523 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:39.525 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:51:39.526 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:51:39.526 +07:00 [INF] Retrieved details for location ID: 13
+2024-08-06 10:51:39.526 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:39.526 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:51:39.526 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - - - 204 - - 0.2517ms
+2024-08-06 10:51:39.526 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 3.3628ms
+2024-08-06 10:51:39.526 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:51:39.526 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13 - - - 200 - application/json;+charset=utf-8 4.4690ms
+2024-08-06 10:51:39.528 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:51:39.529 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:51:39.529 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:39.529 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:51:39.531 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:51:39.531 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:51:39.531 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 2.0971ms
+2024-08-06 10:51:39.531 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:51:39.531 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13/needs - - - 200 - application/json;+charset=utf-8 2.9752ms
+2024-08-06 10:53:22.663 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:53:22.663 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:22.663 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.8451ms
+2024-08-06 10:53:22.667 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:53:22.667 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:22.668 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:53:22.668 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:22.674 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:53:22.677 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:53:22.677 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:53:22.678 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 9.4673ms
+2024-08-06 10:53:22.678 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:53:22.678 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 11.0108ms
+2024-08-06 10:53:27.702 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:27.702 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:27.702 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.4991ms
+2024-08-06 10:53:27.704 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:27.704 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:27.705 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:27.705 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:27.710 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:53:27.711 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:53:27.711 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:53:27.711 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 6.4327ms
+2024-08-06 10:53:27.711 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:27.711 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:27.711 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 7.3558ms
+2024-08-06 10:53:27.712 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:27.712 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.2715ms
+2024-08-06 10:53:27.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:27.727 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:27.727 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:27.727 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:27.730 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:53:27.731 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:53:27.731 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 3.5377ms
+2024-08-06 10:53:27.731 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:27.731 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 4.4769ms
+2024-08-06 10:53:36.999 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:36.999 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:36.999 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.2848ms
+2024-08-06 10:53:37.002 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:37.002 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:37.003 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:37.003 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:37.005 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:37.005 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:37.005 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.3100ms
+2024-08-06 10:53:37.007 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:37.008 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:37.008 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:53:37.008 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:37.008 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:37.008 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:53:37.009 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:53:37.009 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 5.9448ms
+2024-08-06 10:53:37.009 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:37.009 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 7.0715ms
+2024-08-06 10:53:37.011 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:53:37.012 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:53:37.012 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 4.3203ms
+2024-08-06 10:53:37.012 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:37.013 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 5.2872ms
+2024-08-06 10:53:47.114 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - -
+2024-08-06 10:53:47.114 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:47.114 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - - - 204 - - 0.4313ms
+2024-08-06 10:53:47.117 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 94
+2024-08-06 10:53:47.118 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:47.118 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 10:53:47.123 +07:00 [INF] Route matched with {action = "OfferDonation", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] OfferDonation(Int32, GiveMap_Backend.Controllers.OfferDonationModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:47.201 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Donations] ([Condition], [ContactInfo], [CreatedAt], [Description], [NeedId], [Quantity], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-08-06 10:53:47.214 +07:00 [INF] New donation offered for need ID: 1
+2024-08-06 10:53:47.216 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'GiveMap_Backend.Models.Donation'.
+2024-08-06 10:53:47.248 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend) in 125.041ms
+2024-08-06 10:53:47.248 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 10:53:47.248 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 94 - 201 - application/json;+charset=utf-8 131.0348ms
+2024-08-06 10:53:50.269 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:50.269 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:50.269 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.2584ms
+2024-08-06 10:53:50.272 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:53:50.272 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:50.273 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:50.273 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:50.274 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:50.274 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:50.274 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.1774ms
+2024-08-06 10:53:50.276 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:53:50.276 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:50.276 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:50.276 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:50.277 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:53:50.278 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:53:50.278 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:53:50.278 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 4.9586ms
+2024-08-06 10:53:50.278 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:50.278 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 5.9964ms
+2024-08-06 10:53:50.279 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:53:50.280 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:53:50.280 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 3.915ms
+2024-08-06 10:53:50.280 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:50.280 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 4.5641ms
+2024-08-06 10:53:54.797 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/10 - -
+2024-08-06 10:53:54.797 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:54.797 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/10 - - - 204 - - 0.3732ms
+2024-08-06 10:53:54.801 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/10/needs - -
+2024-08-06 10:53:54.801 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:54.801 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/10/needs - - - 204 - - 0.2093ms
+2024-08-06 10:53:54.817 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/10/needs - -
+2024-08-06 10:53:54.817 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/10 - -
+2024-08-06 10:53:54.817 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:54.817 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:53:54.818 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:54.818 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:54.819 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:54.819 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:53:54.820 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:53:54.820 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:53:54.821 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:53:54.821 +07:00 [INF] Retrieved details for location ID: 10
+2024-08-06 10:53:54.821 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:53:54.821 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 2.7488ms
+2024-08-06 10:53:54.821 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 1.7422ms
+2024-08-06 10:53:54.821 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:53:54.821 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:53:54.821 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/10 - - - 200 - application/json;+charset=utf-8 4.2469ms
+2024-08-06 10:53:54.821 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/10/needs - - - 200 - application/json;+charset=utf-8 4.2040ms
+2024-08-06 10:54:00.927 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13 - -
+2024-08-06 10:54:00.927 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:00.927 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13 - - - 204 - - 0.2810ms
+2024-08-06 10:54:00.930 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13 - -
+2024-08-06 10:54:00.930 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:00.930 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:00.931 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:00.931 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:54:00.932 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:00.932 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/13/needs - - - 204 - - 0.1878ms
+2024-08-06 10:54:00.933 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:00.933 +07:00 [INF] Retrieved details for location ID: 13
+2024-08-06 10:54:00.933 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:00.933 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 2.6829ms
+2024-08-06 10:54:00.933 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:00.934 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13 - - - 200 - application/json;+charset=utf-8 3.6493ms
+2024-08-06 10:54:00.934 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/13/needs - -
+2024-08-06 10:54:00.934 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:00.934 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:00.934 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:00.936 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:00.936 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:00.937 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 2.2139ms
+2024-08-06 10:54:00.937 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:00.937 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/13/needs - - - 200 - application/json;+charset=utf-8 2.9743ms
+2024-08-06 10:54:04.204 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:54:04.204 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:04.204 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.2423ms
+2024-08-06 10:54:04.207 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:54:04.207 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:04.208 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:04.208 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:04.209 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:04.210 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:54:04.210 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:54:04.210 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:04.210 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:04.210 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.1529ms
+2024-08-06 10:54:04.210 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 2.6554ms
+2024-08-06 10:54:04.210 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:04.210 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 3.4768ms
+2024-08-06 10:54:04.226 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:54:04.226 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:04.227 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:04.227 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:04.229 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:04.229 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:04.230 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 2.6169ms
+2024-08-06 10:54:04.230 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:04.230 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 3.6060ms
+2024-08-06 10:54:09.990 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11 - -
+2024-08-06 10:54:09.990 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:09.990 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11 - - - 204 - - 0.2932ms
+2024-08-06 10:54:09.992 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11 - -
+2024-08-06 10:54:09.993 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:09.993 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:09.993 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:09.994 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:54:09.994 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:09.994 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - - - 204 - - 0.2246ms
+2024-08-06 10:54:09.995 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:09.996 +07:00 [INF] Retrieved details for location ID: 11
+2024-08-06 10:54:09.996 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:09.996 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 3.2807ms
+2024-08-06 10:54:09.997 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:09.997 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11 - - - 200 - application/json;+charset=utf-8 4.2915ms
+2024-08-06 10:54:10.010 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:54:10.010 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:10.010 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:10.010 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:10.013 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:10.013 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:10.014 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 3.1374ms
+2024-08-06 10:54:10.014 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:10.014 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11/needs - - - 200 - application/json;+charset=utf-8 4.2044ms
+2024-08-06 10:54:15.079 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/8 - -
+2024-08-06 10:54:15.079 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:15.080 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/8 - - - 204 - - 0.4155ms
+2024-08-06 10:54:15.084 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/8/needs - -
+2024-08-06 10:54:15.084 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:15.084 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/8/needs - - - 204 - - 0.2021ms
+2024-08-06 10:54:15.095 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/8/needs - -
+2024-08-06 10:54:15.095 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/8 - -
+2024-08-06 10:54:15.095 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:15.095 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:15.096 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:15.096 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:15.096 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:15.096 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:15.098 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:15.098 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:15.099 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:15.099 +07:00 [INF] Retrieved details for location ID: 8
+2024-08-06 10:54:15.099 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:15.099 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 2.9706ms
+2024-08-06 10:54:15.099 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:15.099 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 3.0853ms
+2024-08-06 10:54:15.099 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:15.099 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/8/needs - - - 200 - application/json;+charset=utf-8 4.4767ms
+2024-08-06 10:54:15.099 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/8 - - - 200 - application/json;+charset=utf-8 4.4699ms
+2024-08-06 10:54:41.619 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11 - -
+2024-08-06 10:54:41.619 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:41.619 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11 - - - 204 - - 0.2511ms
+2024-08-06 10:54:41.622 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11 - -
+2024-08-06 10:54:41.622 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:41.622 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:41.622 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:41.624 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:54:41.624 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:41.624 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/11/needs - - - 204 - - 0.1884ms
+2024-08-06 10:54:41.624 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:41.625 +07:00 [INF] Retrieved details for location ID: 11
+2024-08-06 10:54:41.625 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:41.625 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 2.6595ms
+2024-08-06 10:54:41.625 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:41.625 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11 - - - 200 - application/json;+charset=utf-8 3.5098ms
+2024-08-06 10:54:41.626 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/11/needs - -
+2024-08-06 10:54:41.626 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:41.626 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:41.626 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:41.628 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:41.628 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:41.628 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 1.5928ms
+2024-08-06 10:54:41.628 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:41.628 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/11/needs - - - 200 - application/json;+charset=utf-8 2.1458ms
+2024-08-06 10:54:43.960 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/12 - -
+2024-08-06 10:54:43.960 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:43.960 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/12 - - - 204 - - 0.2206ms
+2024-08-06 10:54:43.963 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/12 - -
+2024-08-06 10:54:43.963 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:43.963 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:43.963 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:43.964 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/12/needs - -
+2024-08-06 10:54:43.964 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:43.964 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/12/needs - - - 204 - - 0.2251ms
+2024-08-06 10:54:43.966 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/12/needs - -
+2024-08-06 10:54:43.966 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:54:43.966 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:43.966 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:54:43.966 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:54:43.967 +07:00 [INF] Retrieved details for location ID: 12
+2024-08-06 10:54:43.967 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:54:43.967 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 3.6397ms
+2024-08-06 10:54:43.967 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:54:43.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/12 - - - 200 - application/json;+charset=utf-8 4.4173ms
+2024-08-06 10:54:43.967 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:54:43.968 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:54:43.968 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 1.7076ms
+2024-08-06 10:54:43.968 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:54:43.968 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/12/needs - - - 200 - application/json;+charset=utf-8 2.2236ms
+2024-08-06 10:55:14.791 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:55:14.791 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:14.791 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.3364ms
+2024-08-06 10:55:14.821 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:55:14.821 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:14.822 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:55:14.822 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:55:14.827 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:55:14.828 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:55:14.868 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:55:14.869 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 46.3639ms
+2024-08-06 10:55:14.869 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:55:14.869 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 47.6035ms
+2024-08-06 10:55:19.290 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:55:19.290 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:19.290 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.3496ms
+2024-08-06 10:55:19.292 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:55:19.292 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:19.293 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:55:19.293 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:55:19.299 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:55:19.299 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:55:19.300 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:55:19.300 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 7.1766ms
+2024-08-06 10:55:19.300 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:55:19.301 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 8.2893ms
+2024-08-06 10:55:19.301 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:55:19.301 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:19.302 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.1979ms
+2024-08-06 10:55:19.303 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:55:19.304 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:55:19.304 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:55:19.304 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:55:19.307 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:55:19.307 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:55:19.308 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 3.555ms
+2024-08-06 10:55:19.308 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:55:19.308 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 4.5057ms
+2024-08-06 10:57:21.148 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:57:21.148 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:21.149 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.5240ms
+2024-08-06 10:57:21.154 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:57:21.154 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:21.154 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:57:21.154 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:57:21.159 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:57:21.159 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:57:21.159 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:57:21.160 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 5.3624ms
+2024-08-06 10:57:21.160 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:57:21.160 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 6.4317ms
+2024-08-06 10:57:25.769 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:57:25.770 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:25.770 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.3358ms
+2024-08-06 10:57:25.772 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:57:25.772 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:25.773 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:57:25.773 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:57:25.777 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:57:25.777 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:57:25.778 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:57:25.778 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 5.1522ms
+2024-08-06 10:57:25.778 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:57:25.778 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 6.1284ms
+2024-08-06 10:57:25.780 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:57:25.780 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:25.780 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.2481ms
+2024-08-06 10:57:25.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:57:25.782 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:25.783 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:57:25.783 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:57:25.787 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:57:25.787 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:57:25.788 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 4.5436ms
+2024-08-06 10:57:25.788 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:57:25.788 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 5.8293ms
+2024-08-06 10:57:28.226 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:57:28.226 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:28.226 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.2746ms
+2024-08-06 10:57:28.229 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:57:28.230 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:57:28.231 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:57:28.234 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:57:28.261 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 10:57:28.264 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:57:28.264 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 30.554ms
+2024-08-06 10:57:28.264 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:57:28.264 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 35.6284ms
+2024-08-06 10:58:47.937 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:58:47.937 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:47.938 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.8226ms
+2024-08-06 10:58:47.950 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:58:47.950 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:47.950 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:58:47.950 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:47.978 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:58:47.980 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:58:47.980 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:58:47.980 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 29.6928ms
+2024-08-06 10:58:47.980 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:58:47.980 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 31.4091ms
+2024-08-06 10:58:50.063 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:58:50.063 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:50.063 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.4548ms
+2024-08-06 10:58:50.066 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:58:50.066 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:50.066 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:58:50.066 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:50.071 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 10:58:50.072 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:58:50.073 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 6.1086ms
+2024-08-06 10:58:50.073 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:58:50.073 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 6.6756ms
+2024-08-06 10:58:52.558 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:58:52.558 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:52.558 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:58:52.558 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:52.562 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:58:52.563 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:58:52.563 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:58:52.563 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 4.7901ms
+2024-08-06 10:58:52.563 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:58:52.563 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 5.4714ms
+2024-08-06 10:58:54.466 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:58:54.466 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:54.466 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.3233ms
+2024-08-06 10:58:54.469 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:58:54.469 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:54.469 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:58:54.469 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:54.474 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:58:54.475 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:58:54.475 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:54.475 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.2138ms
+2024-08-06 10:58:54.475 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:58:54.475 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:58:54.475 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 5.8006ms
+2024-08-06 10:58:54.475 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:58:54.475 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 6.5240ms
+2024-08-06 10:58:54.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:58:54.485 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:54.485 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:58:54.485 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:54.488 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:58:54.489 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:58:54.489 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 4.4389ms
+2024-08-06 10:58:54.490 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:58:54.490 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 5.9829ms
+2024-08-06 10:58:59.905 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:58:59.905 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:59.905 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.3033ms
+2024-08-06 10:58:59.908 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:58:59.908 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:58:59.908 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:58:59.908 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:58:59.913 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 10:58:59.914 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:58:59.914 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 6.108ms
+2024-08-06 10:58:59.914 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:58:59.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 6.6916ms
+2024-08-06 10:59:04.225 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 10:59:04.225 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:04.226 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.3027ms
+2024-08-06 10:59:04.228 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 10:59:04.228 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:04.229 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:59:04.229 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:59:04.232 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 10:59:04.233 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 10:59:04.233 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:59:04.233 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 4.273ms
+2024-08-06 10:59:04.233 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 10:59:04.234 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 5.6830ms
+2024-08-06 10:59:05.940 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 10:59:05.940 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:05.940 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.3029ms
+2024-08-06 10:59:05.942 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 10:59:05.943 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:05.943 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:59:05.943 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:59:05.947 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:59:05.947 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:05.948 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.4727ms
+2024-08-06 10:59:05.950 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 10:59:05.950 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 10:59:05.950 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:05.950 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:59:05.950 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 10:59:05.950 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:59:05.950 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 10:59:05.951 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 7.648ms
+2024-08-06 10:59:05.951 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 10:59:05.951 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 8.4474ms
+2024-08-06 10:59:05.953 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 10:59:05.954 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:59:05.954 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 3.6987ms
+2024-08-06 10:59:05.954 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 10:59:05.954 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 4.2261ms
+2024-08-06 10:59:12.870 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - -
+2024-08-06 10:59:12.870 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:12.871 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - - - 204 - - 0.4192ms
+2024-08-06 10:59:12.873 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 97
+2024-08-06 10:59:12.874 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:12.874 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 10:59:12.874 +07:00 [INF] Route matched with {action = "OfferDonation", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] OfferDonation(Int32, GiveMap_Backend.Controllers.OfferDonationModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:59:12.882 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Donations] ([Condition], [ContactInfo], [CreatedAt], [Description], [NeedId], [Quantity], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-08-06 10:59:12.884 +07:00 [INF] New donation offered for need ID: 1
+2024-08-06 10:59:12.884 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'GiveMap_Backend.Models.Donation'.
+2024-08-06 10:59:12.885 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend) in 11.187ms
+2024-08-06 10:59:12.885 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 10:59:12.885 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 97 - 201 - application/json;+charset=utf-8 11.9849ms
+2024-08-06 10:59:19.539 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:59:19.539 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:19.539 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.3117ms
+2024-08-06 10:59:19.541 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 10:59:19.541 +07:00 [INF] CORS policy execution successful.
+2024-08-06 10:59:19.542 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:59:19.542 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 10:59:19.547 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 10:59:19.547 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 10:59:19.548 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 5.8834ms
+2024-08-06 10:59:19.548 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 10:59:19.548 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 6.5042ms
+2024-08-06 11:00:56.672 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:00:56.673 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:00:56.673 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.3507ms
+2024-08-06 11:00:56.677 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:00:56.677 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:00:56.678 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:00:56.678 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:00:56.684 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 11:00:56.685 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:00:56.685 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 7.8399ms
+2024-08-06 11:00:56.686 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:00:56.686 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 9.0348ms
+2024-08-06 11:00:57.875 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 11:00:57.876 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:00:57.876 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.5810ms
+2024-08-06 11:00:57.879 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 11:00:57.879 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:00:57.879 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 11:00:57.879 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:00:57.882 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 11:00:57.883 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 11:00:57.883 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:00:57.884 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 4.9512ms
+2024-08-06 11:00:57.884 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 11:00:57.884 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 5.7950ms
+2024-08-06 11:01:01.606 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9 - -
+2024-08-06 11:01:01.606 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:01.606 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9 - - - 204 - - 0.2347ms
+2024-08-06 11:01:01.609 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9 - -
+2024-08-06 11:01:01.609 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:01.609 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - -
+2024-08-06 11:01:01.609 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 11:01:01.609 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:01.609 +07:00 [INF] Route matched with {action = "GetLocationDetails", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationDetails(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:01:01.609 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/9/needs - - - 204 - - 0.1490ms
+2024-08-06 11:01:01.611 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/9/needs - -
+2024-08-06 11:01:01.611 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:01.611 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 11:01:01.612 +07:00 [INF] Route matched with {action = "GetLocationNeeds", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocationNeeds(Int32) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:01:01.613 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId], [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[CreatedAt], [u].[Email], [u].[EmailConfirmed], [u].[IsEmailConfirmed], [u].[LastLoginDate], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[Role], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Locations] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__locationId_0
+2024-08-06 11:01:01.614 +07:00 [INF] Retrieved details for location ID: 9
+2024-08-06 11:01:01.614 +07:00 [INF] Executing OkObjectResult, writing value of type 'GiveMap_Backend.Models.Location'.
+2024-08-06 11:01:01.614 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend) in 4.6566ms
+2024-08-06 11:01:01.614 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationDetails (GiveMap-Backend)'
+2024-08-06 11:01:01.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9 - - - 200 - application/json;+charset=utf-8 5.2625ms
+2024-08-06 11:01:01.620 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__locationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity]
+FROM [Needs] AS [n]
+WHERE [n].[LocationId] = @__locationId_0
+2024-08-06 11:01:01.621 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Need, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:01:01.621 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend) in 9.4931ms
+2024-08-06 11:01:01.621 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocationNeeds (GiveMap-Backend)'
+2024-08-06 11:01:01.621 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/9/needs - - - 200 - application/json;+charset=utf-8 10.0556ms
+2024-08-06 11:01:06.469 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - -
+2024-08-06 11:01:06.469 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:06.469 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/needs/1/donations - - - 204 - - 0.2785ms
+2024-08-06 11:01:06.471 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 93
+2024-08-06 11:01:06.471 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:06.472 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 11:01:06.472 +07:00 [INF] Route matched with {action = "OfferDonation", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] OfferDonation(Int32, GiveMap_Backend.Controllers.OfferDonationModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:01:06.502 +07:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Donations] ([Condition], [ContactInfo], [CreatedAt], [Description], [NeedId], [Quantity], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-08-06 11:01:06.503 +07:00 [INF] New donation offered for need ID: 1
+2024-08-06 11:01:06.503 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'GiveMap_Backend.Models.Donation'.
+2024-08-06 11:01:06.503 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend) in 31.3956ms
+2024-08-06 11:01:06.503 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.OfferDonation (GiveMap-Backend)'
+2024-08-06 11:01:06.503 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44384/api/location/needs/1/donations application/json 93 - 201 - application/json;+charset=utf-8 31.9523ms
+2024-08-06 11:01:06.528 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:01:06.529 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:06.529 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.6820ms
+2024-08-06 11:01:06.533 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:01:06.533 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:01:06.533 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:01:06.533 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:01:06.539 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 11:01:06.539 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:01:06.540 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 6.3905ms
+2024-08-06 11:01:06.540 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:01:06.540 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 6.9416ms
+2024-08-06 11:02:12.540 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:02:12.540 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:02:12.540 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location/user/donations - - - 204 - - 0.3021ms
+2024-08-06 11:02:12.550 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location/user/donations - -
+2024-08-06 11:02:12.551 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:02:12.551 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:02:12.551 +07:00 [INF] Route matched with {action = "GetUserDonations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDonations() on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:02:12.556 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Condition], [d].[ContactInfo], [d].[CreatedAt], [d].[Description], [d].[NeedId], [d].[Quantity], [d].[Status], [d].[UserId], [n].[Id], [n].[Category], [n].[CreatedAt], [n].[Description], [n].[LocationId], [n].[Quantity], [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Donations] AS [d]
+INNER JOIN [Needs] AS [n] ON [d].[NeedId] = [n].[Id]
+INNER JOIN [Locations] AS [l] ON [n].[LocationId] = [l].[Id]
+WHERE [d].[UserId] = @__userId_0
+ORDER BY [d].[CreatedAt] DESC
+2024-08-06 11:02:12.557 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Donation, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:02:12.557 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend) in 6.2432ms
+2024-08-06 11:02:12.557 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetUserDonations (GiveMap-Backend)'
+2024-08-06 11:02:12.557 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location/user/donations - - - 200 - application/json;+charset=utf-8 6.8125ms
+2024-08-06 11:02:14.485 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44384/api/location - -
+2024-08-06 11:02:14.485 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:02:14.485 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44384/api/location - - - 204 - - 0.9155ms
+2024-08-06 11:02:14.491 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44384/api/location - -
+2024-08-06 11:02:14.491 +07:00 [INF] CORS policy execution successful.
+2024-08-06 11:02:14.491 +07:00 [INF] Executing endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 11:02:14.491 +07:00 [INF] Route matched with {action = "GetLocations", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLocations(GiveMap_Backend.Controllers.LocationFilterModel) on controller GiveMap_Backend.Controllers.LocationController (GiveMap-Backend).
+2024-08-06 11:02:14.498 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Category], [l].[CreatedAt], [l].[Description], [l].[ImageUrls], [l].[Latitude], [l].[Longitude], [l].[Name], [l].[UpdatedAt], [l].[UserId]
+FROM [Locations] AS [l]
+2024-08-06 11:02:14.499 +07:00 [INF] Retrieved locations. Keyword: , Category: , FromDate: . Found 6 results.
+2024-08-06 11:02:14.499 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GiveMap_Backend.Models.Location, GiveMap-Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 11:02:14.500 +07:00 [INF] Executed action GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend) in 9.0016ms
+2024-08-06 11:02:14.501 +07:00 [INF] Executed endpoint 'GiveMap_Backend.Controllers.LocationController.GetLocations (GiveMap-Backend)'
+2024-08-06 11:02:14.502 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44384/api/location - - - 200 - application/json;+charset=utf-8 11.0127ms
+2024-08-06 19:42:14.866 +07:00 [INF] Application is shutting down...
